@@ -17,9 +17,13 @@ public class Program2 {
         departmentDao.insert(newDepartment);
         System.out.println("Inserted! New ID = " + newDepartment.getId());
 
-        System.out.println("\n=== TEST 2: seller DELETE ===");
+        System.out.println("\n=== TEST 2: department DELETE ===");
         System.out.println("Enter ID for delete test: ");
         int id = in.nextInt();
         departmentDao.deleteById(id);
+
+        System.out.println("\n=== TEST 3: FindById department ===");
+        Department dep = departmentDao.findById(2);
+        System.out.println(dep);
     }
 }
